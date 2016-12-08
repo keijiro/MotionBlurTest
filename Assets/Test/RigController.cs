@@ -6,8 +6,15 @@ public class RigController : MonoBehaviour
 {
     [SerializeField] float _interval = 3;
     [SerializeField] Transform[] _targets;
+    [SerializeField] Transform _particleSystem;
 
-    IEnumerator Start()
+    void Start()
+    {
+        StartCoroutine(CameraCoroutine());
+        StartCoroutine(SprayCoroutine());
+    }
+
+    IEnumerator CameraCoroutine()
     {
         var follower = GetComponent<SmoothFollow>();
 
@@ -18,6 +25,20 @@ public class RigController : MonoBehaviour
             RehashPivot(_targets[i]);
             follower.target = _targets[i];
             yield return new WaitForSeconds(_interval);
+        }
+    }
+
+    IEnumerator SprayCoroutine()
+    {
+        var sprays = _particleSystem.GetComponentsInChildren<Kvant.SprayMV>();
+
+        while (true)
+        {
+            yield return null;
+
+            var v = Mathf.Clamp01(-2.0f * Mathf.Sin(Time.time * 0.1f));
+
+            foreach (var spray in sprays) spray.throttle = v;
         }
     }
 

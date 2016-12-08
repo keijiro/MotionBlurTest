@@ -76,28 +76,28 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       shutterAngle: 360
-      sampleCount: 12
+      sampleCount: 15
       frameBlending: 0
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
-      lowPercent: 65
-      highPercent: 95
+      lowPercent: 54.168774
+      highPercent: 84.168785
       minLuminance: 0.03
-      maxLuminance: 2
-      exposureCompensation: 0.5
+      maxLuminance: 3
+      exposureCompensation: 0.2
       adaptationType: 0
       speedUp: 2
       speedDown: 1
       logMin: -8
-      logMax: 4
+      logMax: 3
   bloom:
     m_Enabled: 0
     m_Settings:
       bloom:
         intensity: 0.3
-        threshold: 1.1
-        softKnee: 0.5
+        threshold: 2
+        softKnee: 0.16
         radius: 7
         antiFlicker: 0
       lensDirt:
@@ -115,7 +115,7 @@ MonoBehaviour:
         neutralWhiteLevel: 5.3
         neutralWhiteClip: 10
       basic:
-        postExposure: 2.82
+        postExposure: 2.5
         temperature: 18
         tint: -9
         hueShift: -11
@@ -292,7 +292,7 @@ MonoBehaviour:
       opacity: 1
   monitors:
     currentMonitorID: 0
-    refreshOnPlay: 0
+    refreshOnPlay: 1
     histogramMode: 3
     waveformExposure: 0.12
     waveformY: 0
