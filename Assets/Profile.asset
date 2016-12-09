@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Settings:
       shutterAngle: 360
       sampleCount: 11
-      windowShape: 0
+      windowShape: 0.2
       frameBlending: 0
   eyeAdaptation:
     m_Enabled: 0
