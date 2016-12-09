@@ -1,5 +1,3 @@
-/Assets/PostProcessing
-
 *.swp
 
 /[Ll]ibrary/
@@ -29,7 +27,6 @@ sysinfo.txt
 
 # Builds
 *.apk
-*.unitypackage
 
 # Windows image file caches
 Thumbs.db
