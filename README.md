@@ -9,4 +9,4 @@ This is an example project that was made for testing the Motion Blur component i
 Difference From the Standard Version
 ------------------------------------
 
-The Motion Blur component in this project is slightly different 
+The Motion Blur component in this project is slightly different from the official release -- it has an extra property named *Window Shape* in the post-processing profile. This property can be used to tweak the temporal window kernel from triangle (0.0) to trapezoid (0.0~1.0) or rectangle (1.0).
