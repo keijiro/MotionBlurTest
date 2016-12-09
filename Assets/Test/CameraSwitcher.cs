@@ -5,22 +5,13 @@ using Klak.Motion;
 public class CameraSwitcher : MonoBehaviour
 {
     [SerializeField] Transform[] _targetList;
-
-    [SerializeField] bool _enableRotation;
-
-    public bool enableRotation {
-        get { return _enableRotation; }
-        set { _enableRotation = value; }
-    }
-
-    [SerializeField] bool _auto = true;
-
-    public bool auto {
-        get { return _auto; }
-        set { _auto = value; }
-    }
-
     [SerializeField] float _interval = 5;
+
+    public void SetFocus(int index)
+    {
+        RehashMotion(_targetList[index]);
+        GetComponent<SmoothFollow>().target = _targetList[index];
+    }
 
     IEnumerator Start()
     {
@@ -32,24 +23,10 @@ public class CameraSwitcher : MonoBehaviour
         {
             foreach (var target in _targetList)
             {
-                if (_auto)
-                {
-                    RehashMotion(target);
-                    follower.target = target;
-                }
+                RehashMotion(target);
+                follower.target = target;
                 yield return new WaitForSeconds(_interval);
             }
-
-            if (_auto) _enableRotation = !_enableRotation;
-        }
-    }
-
-    void Update()
-    {
-        foreach (var target in _targetList)
-        {
-            target.GetComponentInParent<ConstantMotion>().enabled = _enableRotation;
-            target.GetComponentInParent<BrownianMotion>().enabled = !_enableRotation;
         }
     }
 
