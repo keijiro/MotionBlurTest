@@ -149,6 +149,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 165101639}
+  - 114: {fileID: 165101640}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -173,6 +174,20 @@ Transform:
   - {fileID: 335492002}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &165101640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165101638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864b0259d6431424fa75a9d4314c6c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _throttle: 1
+  _auto: 1
+  _interval: 40
 --- !u!1 &173250327
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +197,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 173250328}
   - 114: {fileID: 173250329}
+  - 114: {fileID: 173250330}
   m_Layer: 0
   m_Name: Angle
   m_TagString: Untagged
@@ -209,7 +225,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173250327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543ddbe12367a4899b011d43ef41f357, type: 3}
   m_Name: 
@@ -224,6 +240,24 @@ MonoBehaviour:
   _rotationScale: {x: 0, y: 400, z: 0}
   _positionFractalLevel: 3
   _rotationFractalLevel: 2
+--- !u!114 &173250330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173250327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db4c4a72731246b2b1ad1e73178c04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _translationMode: 0
+  _translationVector: {x: 0, y: 0, z: 1}
+  _translationSpeed: 1
+  _rotationMode: 2
+  _rotationAxis: {x: 0, y: 1, z: 0}
+  _rotationSpeed: 100
+  _useLocalCoordinate: 1
 --- !u!1 &201198307
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +372,7 @@ GameObject:
   - 4: {fileID: 285180650}
   - 114: {fileID: 285180651}
   m_Layer: 0
-  m_Name: Camera Controller
+  m_Name: Point of Focus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,6 +1499,62 @@ Transform:
   - {fileID: 2035439870}
   m_Father: {fileID: 1208786838}
   m_RootOrder: 1
+--- !u!1 &1432910954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1432910955}
+  m_Layer: 0
+  m_Name: Fence Target (off)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1432910955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432910954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!1 &1555424403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1555424404}
+  m_Layer: 0
+  m_Name: Fence Target (on)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1555424404
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555424403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &1605516000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1644,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1614935342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1576,7 +1666,7 @@ MonoBehaviour:
   _enableRotationNoise: 0
   _positionFrequency: 0.18
   _rotationFrequency: 0.2
-  _positionAmplitude: 4
+  _positionAmplitude: 3
   _rotationAmplitude: 10
   _positionScale: {x: 0, y: 0, z: 1}
   _rotationScale: {x: 1, y: 1, z: 0}
@@ -1723,7 +1813,7 @@ GameObject:
   - 114: {fileID: 1773128974}
   - 114: {fileID: 1773128976}
   m_Layer: 0
-  m_Name: Camera Mover
+  m_Name: Camera Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1771,11 +1861,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4e5e44f30db9441911df2b6e04eda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interval: 8
-  _targets:
+  _targetList:
   - {fileID: 445181810}
   - {fileID: 349540985}
-  _particleSystem: {fileID: 165101639}
+  _enableRotation: 0
+  _auto: 1
+  _interval: 10
 --- !u!1 &1780220973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1983,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2035439870}
   - 114: {fileID: 2035439871}
+  - 114: {fileID: 2035439872}
   m_Layer: 0
   m_Name: Camera Pivot
   m_TagString: Untagged
@@ -1919,7 +2011,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2035439869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543ddbe12367a4899b011d43ef41f357, type: 3}
   m_Name: 
@@ -1934,6 +2026,24 @@ MonoBehaviour:
   _rotationScale: {x: 0, y: 400, z: 0}
   _positionFractalLevel: 3
   _rotationFractalLevel: 2
+--- !u!114 &2035439872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035439869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db4c4a72731246b2b1ad1e73178c04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _translationMode: 0
+  _translationVector: {x: 0, y: 0, z: 1}
+  _translationSpeed: 1
+  _rotationMode: 2
+  _rotationAxis: {x: 0, y: 1, z: 0}
+  _rotationSpeed: 100
+  _useLocalCoordinate: 1
 --- !u!1 &2051981330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2127,7 @@ MonoBehaviour:
   _translationSpeed: 1
   _rotationMode: 2
   _rotationAxis: {x: 0, y: 1, z: 0}
-  _rotationSpeed: 300
+  _rotationSpeed: -300
   _useLocalCoordinate: 1
 --- !u!4 &2070592657
 Transform:
@@ -2041,6 +2151,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2111548453}
+  - 114: {fileID: 2111548454}
+  - 114: {fileID: 2111548455}
   m_Layer: 0
   m_Name: Fence
   m_TagString: Untagged
@@ -2055,7 +2167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2111548452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2065,3 +2177,36 @@ Transform:
   - {fileID: 905528655}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &2111548454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2111548452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04f5e50cd25d4df6ad5fe43d1f88cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolator: 2
+  _target: {fileID: 1432910955}
+  _positionSpeed: 8
+  _rotationSpeed: 0
+  _jumpDistance: 1
+  _jumpAngle: 60
+--- !u!114 &2111548455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2111548452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb15a2335c10e624884f1adf4654d511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetOn: {fileID: 1555424404}
+  _targetOff: {fileID: 1432910955}
+  _isOn: 0
+  _auto: 1
+  _interval: 5
