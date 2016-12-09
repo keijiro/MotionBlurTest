@@ -10,6 +10,7 @@ namespace UnityEditor.PostProcessing
     {
         SerializedProperty m_ShutterAngle;
         SerializedProperty m_SampleCount;
+        SerializedProperty m_WindowShape;
         SerializedProperty m_FrameBlending;
 
         GraphDrawer m_GraphDrawer;
@@ -164,6 +165,7 @@ namespace UnityEditor.PostProcessing
         {
             m_ShutterAngle = FindSetting((Settings x) => x.shutterAngle);
             m_SampleCount = FindSetting((Settings x) => x.sampleCount);
+            m_WindowShape = FindSetting((Settings x) => x.windowShape);
             m_FrameBlending = FindSetting((Settings x) => x.frameBlending);
         }
 
@@ -177,6 +179,7 @@ namespace UnityEditor.PostProcessing
             m_GraphDrawer.DrawShutterGraph(m_ShutterAngle.floatValue);
             EditorGUILayout.PropertyField(m_ShutterAngle);
             EditorGUILayout.PropertyField(m_SampleCount);
+            EditorGUILayout.PropertyField(m_WindowShape);
             EditorGUI.indentLevel--;
             EditorGUILayout.Space();
 

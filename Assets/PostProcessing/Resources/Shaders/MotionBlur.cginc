@@ -33,6 +33,8 @@ float _RcpMaxBlurRadius;
 // Filter parameters/coefficients
 half _LoopCount;
 
+half _WindowShape;
+
 // History buffer for frame blending
 sampler2D _History1LumaTex;
 sampler2D _History2LumaTex;
@@ -266,7 +268,7 @@ half4 FragReconstruction(VaryingsMultitex i) : SV_Target
 
         // Sample weight
         // (Distance test) * (Spreading out by motion) * (Triangular window)
-        const half w = saturate(l_v - l_t) / l_v * (1.2 - t);
+        const half w = saturate(l_v - l_t) / l_v * saturate(_WindowShape - t);
 
         // Color accumulation
         acc += half4(c, 1.0) * w;
