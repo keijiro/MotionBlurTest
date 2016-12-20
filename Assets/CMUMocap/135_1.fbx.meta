@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c9bd9295f1cc0f24492fc79871a7e383
-timeCreated: 1482063438
+guid: 103c99fe19b5e2541a2d3bf7a651fcae
+timeCreated: 1482078646
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -137,7 +137,7 @@ ModelImporter:
     400126: Neo_Spine
     400128: Neo_Spine1
     400130: Neo_Spine2
-    7400000: 85_12
+    7400000: 135_01
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -152,7 +152,7 @@ ModelImporter:
     animationImportErrors: 
     animationImportWarnings: "\nInbetween bone default rotation found in this file
       is different from the one found in the source avatar:\n\t'Neo_Spine2' : rotation
-      error = 1.251687 deg\n\nClip '85_12' has import animation warnings that might
+      error = 3.630150 deg\n\nClip '135_01' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'Neo_Spine2' is inbetween humanoid transforms and has
       rotation animation that will be discarded.\n"
@@ -166,10 +166,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: 85_12
-      takeName: 85_12
-      firstFrame: 76
-      lastFrame: 1095
+      name: 135_01
+      takeName: 135_01
+      firstFrame: 84
+      lastFrame: 1515
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -179,7 +179,7 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
