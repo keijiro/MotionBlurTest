@@ -103,7 +103,7 @@ namespace Klak.Motion
         public void Rehash()
         {
             for (var i = 0; i < 6; i++)
-                _time[i] = i * 0.66f + 1;
+                _time[i] = i * 0.66f + 32;
                 //_time[i] = Random.Range(-10000.0f, 0.0f);
         }
 
