@@ -21,7 +21,6 @@ namespace UnityEngine.PostProcessing
             internal static readonly int _TileVRT           = Shader.PropertyToID("_TileVRT");
             internal static readonly int _NeighborMaxTex    = Shader.PropertyToID("_NeighborMaxTex");
             internal static readonly int _LoopCount         = Shader.PropertyToID("_LoopCount");
-            internal static readonly int _WindowShape       = Shader.PropertyToID("_WindowShape");
             internal static readonly int _TempRT            = Shader.PropertyToID("_TempRT");
 
             internal static readonly int _History1LumaTex   = Shader.PropertyToID("_History1LumaTex");
@@ -141,7 +140,6 @@ namespace UnityEngine.PostProcessing
 
                 // Pass 7 - Reconstruction pass
                 cb.SetGlobalFloat(Uniforms._LoopCount, Mathf.Clamp(settings.sampleCount / 2, 1, 64));
-                cb.SetGlobalFloat(Uniforms._WindowShape, settings.windowShape + 1f);
                 cb.SetGlobalTexture(Uniforms._MainTex, source);
 
                 cb.Blit(source, destination, material, (int)Pass.Reconstruction);
